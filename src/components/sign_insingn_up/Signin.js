@@ -29,7 +29,7 @@ const Signin = () => {
     e.preventDefault();
     const { email,password } = logdata;
     try {
-        const res = await fetch("/login", {
+        const res = await fetch("https://amazon-clone-backend-mha6.onrender.com/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

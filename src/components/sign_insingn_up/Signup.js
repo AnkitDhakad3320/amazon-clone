@@ -30,7 +30,7 @@ const Signup = () => {
     e.preventDefault();
     const { fname, email, mobile, password, cpassword } = udata;
     try {
-        const res = await fetch("/register", {
+        const res = await fetch("https://amazon-clone-backend-mha6.onrender.com/register", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -41,7 +41,8 @@ const Signup = () => {
         });
 
         const data = await res.json();
-        console.log(data);
+        // console.log(data);
+  
 
         if (res.status === 422 || !data) {
             toast.error("Invalid Details 👎!", {

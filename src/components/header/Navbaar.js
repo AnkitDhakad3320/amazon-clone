@@ -44,13 +44,13 @@ const Navbaar = () => {
   const [dropen, setDropen] = useState(false);
 
   const getdetailvaliduser = async () => {
-    const res = await fetch("/validuser", {
+    const res = await fetch("https://amazon-clone-backend-mha6.onrender.com/validuser", {
       method: "GET",
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
       },
-      credentials: "include",
+      // credentials: "include",
     });
 
     const data = await res.json();
@@ -66,7 +66,7 @@ const Navbaar = () => {
 
   // for logout
   const logoutuser = async () => {
-    const res2 = await fetch("/logout", {
+    const res2 = await fetch("https://amazon-clone-backend-mha6.onrender.com/logout", {
       method: "GET",
       headers: {
         Accept: "application/json",

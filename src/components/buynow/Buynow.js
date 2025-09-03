@@ -9,7 +9,7 @@ const Buynow = () => {
   console.log(cartdata);
 
   const getdatabuy = async () => {
-    const res = await fetch("/cartdetails", {
+    const res = await fetch("https://amazon-clone-backend-mha6.onrender.com/cartdetails", {
       method: "GET",
       headers: {
         Accept: "application/json",
